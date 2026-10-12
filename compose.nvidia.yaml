@@ -1,0 +1,13 @@
+services:
+  server:
+    gpus: all
+    environment:
+      LIBGL_ALWAYS_SOFTWARE: "0"
+      NVIDIA_DRIVER_CAPABILITIES: graphics,compute,utility,display
+      __EGL_VENDOR_LIBRARY_FILENAMES: /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+  gui:
+    gpus: all
+    environment:
+      LIBGL_ALWAYS_SOFTWARE: "0"
+      NVIDIA_DRIVER_CAPABILITIES: graphics,compute,utility,display
+      __GLX_VENDOR_LIBRARY_NAME: nvidia

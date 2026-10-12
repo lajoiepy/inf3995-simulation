@@ -1,0 +1,4 @@
+newmtl terrain
+Ka .43 .49 .57
+Kd .43 .49 .57
+Ks 0 0 0

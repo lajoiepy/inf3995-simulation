@@ -1,0 +1,38 @@
+name: inf3995-simulation
+
+x-common: &common
+  image: inf3995-simulation:jazzy
+  build: .
+  init: true
+  shm_size: 1gb
+  environment: &env
+    ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-100}
+    GZ_PARTITION: inf3995_simulation
+    LIBGL_ALWAYS_SOFTWARE: "1"
+    QT_X11_NO_MITSHM: "1"
+
+services:
+  server:
+    <<: *common
+    command: [bash, scripts/launch.sh, server]
+  bridge:
+    <<: *common
+    command: [bash, scripts/launch.sh, bridge]
+  tools:
+    <<: *common
+    profiles: [tools]
+    stdin_open: true
+    tty: true
+    command: [bash]
+  gui:
+    <<: *common
+    profiles: [gui]
+    environment:
+      <<: *env
+      DISPLAY: ${DISPLAY:-:0}
+      XAUTHORITY: /tmp/simulation.xauth
+      GUI_CONFIG: ${GUI_CONFIG:-config/gui.config}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${SIM_XAUTH:-./.runtime/xauth}:/tmp/simulation.xauth:ro
+    command: [bash, scripts/launch.sh, gui]
