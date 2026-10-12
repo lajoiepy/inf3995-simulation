@@ -58,3 +58,21 @@ panneau Image. Remplacer `go2_1` par `go2_2` pour voir le second robot.
 ```bash
 bash sim.sh stop
 ```
+
+## Compatibilité
+
+**La configuration fournie a été validée avec Jazzy et Harmonic uniquement.**
+
+Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement tunnels.sdf fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
+
+### Si vous souhaitez utiliser le contrôleur fourni dans Humble
+
+1. Elle peut être lancée sur un ordinateur où Humble est installé : Docker conserve
+Jazzy à l'intérieur du conteneur. Cela ne valide pas les échanges entre des nœuds
+Humble sur l'hôte et le pont Jazzy du conteneur.
+
+2. Bien que [Humble est normalement associé à Gazebo Fortress](https://gazebosim.org/docs/fortress/ros_installation/).
+Humble avec Harmonic est également possible avec le paquet alternatif
+`ros-humble-ros-gzharmonic`, qui entre en conflit avec les paquets Humble `ros_gz`
+standards. Cette option nécessiterait une image adaptée et des essais séparés.
+
