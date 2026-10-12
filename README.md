@@ -63,7 +63,7 @@ bash sim.sh stop
 
 **La configuration fournie a été validée avec Jazzy et Harmonic uniquement.**
 
-Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement tunnels.sdf fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
+Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement worlds/tunnels.sdf fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
 
 ### Si vous souhaitez utiliser le contrôleur fourni dans ce dépôt avec Humble
 
