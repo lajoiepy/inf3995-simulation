@@ -65,7 +65,7 @@ bash sim.sh stop
 
 Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement tunnels.sdf fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
 
-### Si vous souhaitez utiliser le contrôleur fourni dans Humble
+### Si vous souhaitez utiliser le contrôleur fourni dans ce dépôt avec Humble
 
 1. Elle peut être lancée sur un ordinateur où Humble est installé : Docker conserve
 Jazzy à l'intérieur du conteneur. Cela ne valide pas les échanges entre des nœuds
