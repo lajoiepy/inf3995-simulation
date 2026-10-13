@@ -1,5 +1,11 @@
 # INF3995 — Simulation de corridors avec deux Go2
 
+## Le modèle
+
+Le plus simple est d'utiliser le `worlds/tunnels.sdf` dans votre simulateur.
+
+Les autres fichiers et scripts dans ce dépôt ne sont pas obligatoires, mais ils peuvent être utiles pour tester ce modèle.
+
 ## Démarrer
 
 Depuis ce dossier :
@@ -63,7 +69,7 @@ bash sim.sh stop
 
 **La configuration fournie a été validée avec Jazzy et Harmonic uniquement.**
 
-Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement worlds/tunnels.sdf fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
+Par contre, peu importe votre configuration, vous pouvez simplement utiliser l'environnement `worlds/tunnels.sdf` fourni dans ce dépôt et ajouter les robots et contrôleurs vous-mêmes.
 
 ### Si vous souhaitez utiliser le contrôleur fourni dans ce dépôt avec Humble
 
